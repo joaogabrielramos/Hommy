@@ -1,0 +1,32 @@
+ion-toolbar{
+    --background:#f5f6f9;
+    display:flex;
+    justify-content: center;
+    
+    
+}
+ion-toolbar img{
+    position: absolute;
+    left:38%;
+    top:16%;
+}
+
+ion-content h2{
+    color: #383a3e;
+    margin-left: 140px;
+}
+
+ion-button{
+    text-transform:lowercase;
+    text-transform: initial;
+    --background:gray;
+    --color:#fff;
+    width: 80px;
+    height: 30px;
+}
+.login{
+    --background:gray;
+    --color: #fff;
+    width: 65px;
+    height: 30px;
+}

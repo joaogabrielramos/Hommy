@@ -1,0 +1,46 @@
+ion-toolbar{
+    --background:#f5f6f9;
+    display:flex;
+    justify-content: center;
+    
+    
+}
+ion-toolbar img{
+    position: absolute;
+    left:38%;
+    top:16%;
+    
+}
+input{
+    border-radius: 8px;
+    display: inline;
+    align-items: center;
+    margin-left: 100px;
+}
+ion-icon{
+    margin-top:4px;
+    margin-left: 5px;
+}
+ion-card-content h5{
+    color:#4c8dff;
+}
+ion-button{
+    --border-radius:8px;
+    border-radius:8px;
+    text-transform:lowercase;
+    text-transform: initial;
+    --background:gray;
+    --color:#fff;
+    width: 80px;
+    height: 30px;
+}
+.login{
+    --background:gray;
+    --color: #fff;
+    width: 65px;
+    height: 30px;
+}
+
+ion-searchbar{
+    --border-radius:8px;
+}
