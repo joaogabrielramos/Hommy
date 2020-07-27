@@ -17,66 +17,18 @@
   
   
   <ion-header collapse="condense">
-    <ion-card></ion-card>
-    <ion-card-content>
-     
-      
-    </ion-card-content>
+    
   </ion-header>
-  <ion-card>
+  <ion-card *ngFor="let republica of republicas">
     <ion-card-header>
-      <ion-card-subtitle>Republica</ion-card-subtitle>
-      <ion-card-title>Quarto compartilhado - Tijuca</ion-card-title>
+      <ion-card-subtitle>{{republica.subtitle}}</ion-card-subtitle>
+      <ion-card-title>{{republica.title}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <img src="assets/img/dorm2.jpg" alt="" width="100%" height="200px">
-      <h4>Situada na Rua Tijuquinha número 123, Rio de Janeiro</h4><h5>Mais...</h5>
-      <ion-icon name="chatbox-ellipses-outline"></ion-icon><ion-icon name="heart"></ion-icon>
+      <img [src]=republica.image width="100%" height="200px">
+      <h4>{{republica.content}}</h4><h5>{{republica.more}}</h5>
+      <ion-icon name="chatbox-ellipses-outline"></ion-icon><ion-icon  name="heart-outline" ></ion-icon>
     </ion-card-content>
   </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Republica</ion-card-subtitle>
-      <ion-card-title>Quarto individual - Ilha do Governador</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <img src="assets/img/dorm.jpg" width="100%" height="200px">
-      <h4>Situada na Rua Ilhazinha número 457,Rio de Janeiro</h4><h5>Mais...</h5>
-      <ion-icon name="chatbox-ellipses-outline"></ion-icon><ion-icon name="heart-outline"></ion-icon>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Republica</ion-card-subtitle>
-      <ion-card-title>Quarto individual - Barra da Tijuca</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <img src="https://images.unsplash.com/photo-1576095910326-9de5a8b207e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" width="100%">
-      <h4>Situada na Rua Barrinha número 223, Rio de Janeiro</h4><h5>Mais...</h5>
-      <ion-icon name="chatbox-ellipses-outline"></ion-icon><ion-icon name="heart-outline"></ion-icon>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Republica</ion-card-subtitle>
-      <ion-card-title>Quarto individual - Seropédica</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <img src="https://images.unsplash.com/photo-1588750653876-52ad8a14af1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" width="100%" height="200px">
-      <h4>Situada na Rua Seropedinha número 220, Rio de Janeiro</h4><h5>Mais...</h5>
-      <ion-icon name="chatbox-ellipses-outline"></ion-icon><ion-icon name="heart"></ion-icon>
-   
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Republica</ion-card-subtitle>
-      <ion-card-title>Quarto compartilhado - Niterói</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <img src="https://images.unsplash.com/photo-1574716236621-87d2be17b3a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" width="100%" height="200px">
-      <h4>Situada na Rua Niteróizinha número 447, Rio de Janeiro</h4><h5>Mais...</h5>
-      <ion-icon name="chatbox-ellipses-outline"></ion-icon><ion-icon name="heart-outline"></ion-icon>
-    </ion-card-content>
-  </ion-card>
+  
 </ion-content>

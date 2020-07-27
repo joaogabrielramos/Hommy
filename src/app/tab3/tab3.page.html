@@ -14,29 +14,17 @@
   <ion-header collapse="condense">
     
   </ion-header>
-  <ion-card>
+  <ion-card *ngFor ="let favorito of favoritos">
     <ion-card-header>
-      <ion-card-subtitle>Republica</ion-card-subtitle>
-      <ion-card-title>Quarto compartilhado - Tijuca</ion-card-title>
+      <ion-card-subtitle>{{favorito.subtitle}}</ion-card-subtitle>
+      <ion-card-title>{{favorito.title}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <img src="assets/img/dorm2.jpg" alt="" width="100%" height="200px">
-      <h4>Situada na Rua Tijuquinha número 123, Rio de Janeiro. Contas inclusas(agua,luz,gás)
-        , preço mensal:R$300.00 reais. Permitidos:Crianças e animais. Proibido:Fumar
+      <img [src]="favorito.image" alt="" width="100%" height="200px">
+      <h4>{{favorito.content}}
       </h4>
     </ion-card-content>
   </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Republica</ion-card-subtitle>
-      <ion-card-title>Quarto individual - Seropédica</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <img src="https://images.unsplash.com/photo-1588750653876-52ad8a14af1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" width="100%" height="200px">
-      <h4>Situada na Rua Seropedinha número 220, Rio de Janeiro. Contas não inclusas, preço mensal:R$150.00. Permitidos: Crianças.
-        Proibido:Fumar e animais.
-      </h4>
-    </ion-card-content>
-  </ion-card>
+  
  
 </ion-content>
