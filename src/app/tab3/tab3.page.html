@@ -9,21 +9,51 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h2>Favoritos</h2>
+  <h2 class="favorite">Favoritos</h2>
   
   <ion-header collapse="condense">
     
   </ion-header>
-  <ion-card *ngFor ="let favorito of favoritos">
+  <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>{{favorito.subtitle}}</ion-card-subtitle>
-      <ion-card-title>{{favorito.title}}</ion-card-title>
+      <ion-card-subtitle>{{favoritos.subtitle}}</ion-card-subtitle>
+      <ion-card-title>{{favoritos.title}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <img [src]="favorito.image" alt="" width="100%" height="200px">
-      <h4>{{favorito.content}}
-      </h4>
+      <ion-chip color="warning" mode="ios" outline="false">
+        <ion-avatar>
+          <img [src]="favoritos.ownerPhoto" />
+        </ion-avatar>
+        <ion-label>Propietário :{{favoritos.ownerName}}</ion-label>
+      </ion-chip>
+      
+      <img [src]="favoritos.image" alt="" width="100%" height="250px">
+      <h2>Descrição:</h2>  <h4>{{favoritos.content}}</h4>
+    
+      
     </ion-card-content>
+    <ion-chip color="primary" outline="true" *ngIf="favoritos.kitchenComplete">
+      <ion-label>Cozinha Completa</ion-label>
+      <ion-icon  name="restaurant-outline"></ion-icon>
+    </ion-chip>
+    <ion-chip color="secondary" outline="true" *ngIf="favoritos.bedroomComplete">
+      <ion-label>Quarto Completo</ion-label>
+      <ion-icon name="bed-outline"></ion-icon>
+    </ion-chip>
+    <ion-chip color="tertiary"  outline="true" *ngIf="favoritos.freeWifi">
+      <ion-label>Wifi Liberado</ion-label>
+      <ion-icon name="wifi-outline"></ion-icon>
+    </ion-chip>
+    <ion-chip color="danger" outline="true">
+      <ion-label> Vagas: {{favoritos.freeBedroom}}</ion-label>
+      <ion-icon name="body-outline"></ion-icon>
+    </ion-chip>
+    <ion-chip color="success" outline="true" *ngIf="favoritos.contas">
+      <ion-label>Contas Inclusas</ion-label>
+      <ion-icon name="bulb-outline"></ion-icon>
+    </ion-chip>
+
+    
   </ion-card>
   
  

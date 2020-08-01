@@ -13,7 +13,7 @@ ion-toolbar img{
 
 ion-content h2{
     color: #383a3e;
-    margin-left: 140px;
+    
 }
 
 ion-button{
@@ -29,4 +29,11 @@ ion-button{
     --color: #fff;
     width: 65px;
     height: 30px;
+}
+.favorite{
+    margin-left: 10px;
+}
+
+ion-content h4{
+    margin-top: 10px;
 }
